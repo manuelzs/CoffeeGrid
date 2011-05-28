@@ -1,0 +1,11 @@
+*~
+.*~
+*.pyc
+*project
+*pydevproject
+.tmp_*
+local_settings.py
+.settings/
+media/*
+*.log
+static/*
