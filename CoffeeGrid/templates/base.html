@@ -1,0 +1,165 @@
+{% load facebook_tags %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<META NAME="Description" CONTENT="CoffeeGrid es el espacio de socialización y networking de la tecnología, la innovación y el emprendimiento en Medellín.">
+<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" />
+<link href="{{ STATIC_URL }}css/layout.css" rel="stylesheet" />
+<link href="{{ STATIC_URL }}css/colors.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bolditalic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/custom.js"></script> 
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.simplemodal.js"></script> 
+<title>CoffeeGrid Network</title>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({appId: 'your app id', status: true, cookie: true,
+             xfbml: true});
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+{% facebook_js %}
+</head>
+
+<body>
+{% block content %}
+
+{% endblock %}
+<div id="header">
+<div id="headercontent">
+<div id="logo">
+  <a href="/">
+  <img id="logonotext" src="{{ STATIC_URL }}img/coffeegrid_logo_notxt.png" height="70" style="" border="0" />
+  <img id="logotext" src="{{ STATIC_URL }}img/coffeegrid_logo_txt.png" height="70" style="display: none;" border="0" />
+  </a>
+</div><!-- logo -->
+</div><!-- headercontent -->
+</div><!-- header -->
+<div id="content">
+<div id="wrapper">
+<script type="text/javascript">
+function showtab(name) {
+    $(".menuitem a").removeClass('active');
+    $("#" + name + " a").addClass('active');
+    $(".tab").hide();
+    $("#" + name + "tab").show();
+}
+</script>
+<div style="clear: both; height: 0;">&nbsp;</div>
+<div id="columns">
+<div class="column" id="quecol">
+  <div id="quecopy" class="copy" style="display: none;">
+    <p>CoffeeGrid propone encuentros de socialización en torno a la innovación, el emprendimiento y la tecnología.</p>
+    <p>CoffeeGrid genera comunidad mediante plataformas para la información, oportunidades para la interacción y dinámicas para la discusión.</p>
+    <p>CoffeeGrid cree en la acción local a nivel global.</p>
+    <p>CoffeeGrid nace de conversaciones alrededor de un café. Por ello, éste va por nuestra cuenta.</p>
+  </div>
+</div><!-- col -->
+<div class="column" id="quiencol">
+  <div id="quiencopy" class="copy" style="display: none;">
+    <center>
+    <a href="javascript:showinfo('odesk');"><img src="{{ STATIC_URL }}img/mesa1.png" class="rollover" hover="{{ STATIC_URL }}img/mesa1_2.png" height="110" border="0" /></a>
+    <a href="javascript:showinfo('lleras')"><img src="{{ STATIC_URL }}img/mesa2.png" class="rollover" hover="{{ STATIC_URL }}img/mesa2_2.png" height="110" border="0" /></a>
+    <a href="javascript:showinfo('uni20')"><img src="{{ STATIC_URL }}img/mesa3.png" class="rollover" hover="{{ STATIC_URL }}img/mesa3_2.png" height="110" border="0" /></a>
+<p style="font-size: 75%; color: #4B3520; text-shadow: 1px 1px 1px #C9D29A;">(click para m&aacute;s información)</p>
+    </center>
+    <br>
+  </div>
+</div><!-- col -->
+<div class="column" id="cuandocol">
+  <div id="cuandocopy" class="copy" style="display: none;">
+    <p>CoffeeGrid/04 será el miércoles 25 de mayo desde las 6:00PM.</p>
+    <p><strong><a href="http://www.caferetiro.com">café retiro</a></strong> será el patrocinador invitado de esta edición.</p>
+    <br /><br /><br /><br />
+    <a href="https://spreadsheets.google.com/viewform?formkey=dEV0eklCYlJ3ZkNkemF2MTRjWWdQQVE6MA"><img border="0" src="{{ STATIC_URL }}img/note.png" /></a>
+  </div>
+</div><!-- col -->
+<div class="infocol" id="odesk" style="display: none; cursor: pointer;">
+  <img src="{{ STATIC_URL }}img/mapa2.png" />
+</div>
+
+<div class="infocol" id="lleras" style="display: none; cursor: pointer;">
+<img src="{{ STATIC_URL }}img/mapa1.jpg" />
+</div>
+
+<div class="infocol" id="uni20" style="display: none; cursor: pointer;">
+  <img src="{{ STATIC_URL }}img/mapa3.png" />
+</div>
+
+<div class="column" id="dondecol">
+  <div id="dondecopy" class="copy" style="display: none;">
+    <p>CoffeeGrid es un formato itinerante que se apropia de diferentes contextos.</p>
+    <p>CoffeeGrid/04 será en el Bar CANECO.</p>
+    <p><i><span style="font-size: 0.95em;">caneco<br />
+    Carrera 37 # 10 - 40<br />
+    Diagonal al Melodie Lounge<br />
+    Medellín<br /><br />
+    <img src="{{ STATIC_URL }}img/mapa_04.png" />
+  </div>
+</div><!-- col -->
+</div><!-- columns -->
+</div><!-- wrapper -->
+</div><!-- content -->
+<div id="footer">
+<div id="footwrap">
+<div id="footercontent">
+  <a href="mailto:info@coffeegrid.org"><span style="font-size: 0.8em; color: #FFF0D6;">info [at] coffeegrid [dot] org</span></a><br />
+  <a href="http://twitter.com/coffeegrid"><img border="0" src="{{ STATIC_URL }}img/twitter.png" width="13" style="margin-right: 5px;"></a>
+  <a href="http://www.facebook.com/pages/CoffeeGrid/368896749615"><img border="0" src="{{ STATIC_URL }}img/facebook.png" width="13" style="margin-right: 5px;"></a>
+  <br /><spa style="font-size: 0.8em; color: #FFF0D6;">&copy; 2011</span>
+</div>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcoffeegrid.org&amp;layout=standard&amp;show_faces=false&amp;width=210&amp;action=like&amp;colorscheme=dark&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:50px; float: right; margin-top: 10px;" allowTransparency="true"></iframe>
+</div>
+</div><!-- footwrap -->
+<script type="text/javascript">
+var uservoiceOptions = {
+  /* required */
+  key: 'coffeegrid',
+  host: 'coffeegrid.uservoice.com',
+  forum: '72187',
+  showTab: true,
+  /* optional */
+  alignment: 'right',
+  background_color: '#000',
+  text_color: 'white',
+  hover_color: '#443030',
+  lang: 'es'
+};
+
+function _loadUserVoice() {
+  var s = document.createElement('script');
+  s.setAttribute('type', 'text/javascript');
+  s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+_loadSuper = window.onload;
+window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18384877-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div id="jbmodal" class="modalbox" style="display: none; background-color: #ffcc00;">
+Consultor, Empresario, Presentador y Presidente Fundador del MIT Enterprise Forum Colombia. Ha trabajado de la mano de la Alcaldía de Medellín y Ruta-n asesorando en la Estrategia de Internacionalización de la ciudad y apoyando los esfuerzo de CulturaE. Es  consultor de EPM en estrategia de participación en el mercado de movilidad Eléctrica y gestión de estrategia para nuevos negocios. También ha asesorado a la Gobernación de Antioquia en estrategias de desarrollo de Energías alternativas para Municipios Modelo, programa de desarrollo regional.
+</div>
+{% initialize_facebook_connect %}
+</body>
+</html>

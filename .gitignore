@@ -6,6 +6,6 @@
 .tmp_*
 local_settings.py
 .settings/
-media/*
+CoffeeGrid/media/*
 *.log
-static/*
+CoffeeGrid/static/*
