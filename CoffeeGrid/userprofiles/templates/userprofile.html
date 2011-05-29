@@ -1,1 +1,27 @@
-User profile
+{% extends 'base.html'%}
+
+{% block content %}
+
+<img src="{{ profile_user.get_profile.avatar }}" />
+
+<h1>{{ profile_user }}</h1>
+<h3>{{ profile_user.get_profile.thoughts }}</h3>
+
+<h2>Ubicación</h2>
+{{ profile_user.get_profile.location }}
+
+<h2>Miembro desde</h2>
+{{ profile_user.date_joined }}
+
+<h2>Introducción</h2>
+{{ profile_user.get_profile.intro }}
+
+<h2>Follow me on:</h2>
+	<h3>Blog: <a href="{{ profile_user.get_profile.blogurl }}" target="_blank">{{ profile_user.get_profile.blogurl }}</a></h3>
+	<h3>Twitter: <a target="_blank" href="http://twitter.com/{{ profile_user.get_profile.twitter }}">@{{ profile_user.get_profile.twitter }}</a></h3>
+
+<a href="/accounts/flag/{{ profile_user }}">Reportar</a>
+
+<h2>Badges</h2>
+
+{% endblock content%}

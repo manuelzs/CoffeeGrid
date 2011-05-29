@@ -35,7 +35,7 @@ TIME_ZONE = 'America/Bogota'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'es-co'
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -113,6 +113,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     here('templates'),
     here('userprofiles/templates'),
+    here('dashboard/templates'),
 )
 
 INSTALLED_APPS = (
@@ -178,3 +179,14 @@ FACEBOOK_INTERNAL = True
 
 # Cache facebook info for x seconds. Default is 30 minutes
 FACEBOOK_CACHE_TIMEOUT = 1800
+
+LOGIN_REDIRECT_URL = '/'
+
+AUTH_PROFILE_MODULE = 'userprofiles.UserProfile'
+
+# Email Settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'noreply@coffeegrid.org'
+EMAIL_HOST_PASSWORD = 'GridCoffee'
+EMAIL_PORT = 587

@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # url(r'^CoffeeGrid/', include('CoffeeGrid.foo.urls')),
 
     # Home
-    url(r'^$', direct_to_template, {'template': 'home/cghome.html'}),
+    url(r'^$', 'dashboard.views.dashboard'),
 
     # Admin
     url(r'^admin/', include(admin.site.urls)),
