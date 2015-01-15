@@ -173,8 +173,8 @@ DUMMY_FACEBOOK_INFO = {
     'proxied_email':None,
 }
 
-FACEBOOK_API_KEY = '41d3f26b96b646ca4bac5e20d8ae3380'
-FACEBOOK_SECRET_KEY = '8bfbd00feac50adf5896a6cf9d5f2d54'
+FACEBOOK_API_KEY = ''
+FACEBOOK_SECRET_KEY = ''
 FACEBOOK_INTERNAL = True
 
 # Cache facebook info for x seconds. Default is 30 minutes
